@@ -1,0 +1,395 @@
+/* 用于美化首页 */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 自动内减 */
+
+}
+/* 以下为清楚默认样式 */
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+}
+.clearfix::after,
+.clearfix::before
+{
+    content: "";
+    display: table;
+}
+.clearfix::after
+{
+    clear: both;
+}
+/* 版心居中 */
+.wrapper
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+body
+{
+    background-color: #f3f5f7;
+}
+.head
+{
+    height: 41px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* 或者margin:30px auto; */
+    border-color: skyblue;
+}
+/* 导航区域 */
+h1
+{
+    float: left;
+    /* 向左浮动 */
+}
+.nav
+{
+    float:left;
+    margin-left: 70px;
+    height: 41px;
+   
+}
+.nav li {
+    float: left;
+    /* 让几个标签显示在一行只能用浮动 */
+    margin-right: 26px;
+}
+.nav li a
+{
+    display: inline-block;
+    /* 改变行内显示模式 */
+    padding: 0 9px;
+    /* 字距离边框的距离是padding */
+    /* 且导航的字通常要设置内边距 */
+    height: 41px;
+    font-size: 18px;
+    color: #050505;
+    line-height: 41px;
+}
+.nav li a:hover
+/* 悬停时的效果 */
+{
+    border-bottom: 2px solid #00a4ff;
+}
+/* 搜索框 */
+.search 
+{
+    float: left;
+    margin-left: 60px;
+    width: 412px;
+    height: 41px;
+    border:1px solid #00a4ff;
+    /* 这里设置了边框线，在后面要记得减掉 */
+
+}
+/* 对输入文本框进行操作，但需注意 */
+/* 不是text,而是input */
+.search input
+{
+    /* 浮动不能少 */
+    float: left;
+    /* 设置了文字的内边距 */
+    padding-left: 20px;
+
+    width: 360px;
+    height: 39px;
+    /* 有一个极易出错的点，width和height没有减掉边框线， */
+    /* 导致后面加了浮动也不会有浮动效果 */
+    border: 0;
+}
+/* 控制placeholder中字的样式 */
+.search input::placeholder
+{
+    font-size: 14px;
+    color: #bfbfbf;
+}
+.search button
+{
+    float: right;
+    width: 50px;
+    height: 40px;
+    background-image: url(../images/btn.png);
+    border: 0;
+    /* 在这里是上面的.search设置了border，这里要清除 */
+
+}
+.user
+{
+    float: left;
+    margin-left: 30px;
+    height: 41px;
+    font-size: 14px;
+    color: #666;
+    line-height: 41px;
+    /* 文字的垂直居中 */
+}
+.user img
+{
+    /* 调节图片对齐方向,middle为垂直居中 */
+    vertical-align: middle;
+}
+.banner
+{
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .wrapper
+{
+    height: 420px;
+    background-image: url(../images/banner2.png);
+
+}
+.banner .wrapper .left 
+{
+    float: left;
+    padding: 0 20px;
+    /* 限制了li的宽度 */
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0,0,0,0.3);
+    /* 用于有透视效果的背景 */
+}
+.banner .wrapper .left li
+{
+    display: inline-block;
+    height: 20px;
+    line-height: 14px;
+    /* li标签有默认的高度，一定要修改 */
+    width: 150px;
+    padding: 3px 0;
+    margin: 12px 0;
+}
+.banner .wrapper .left li:first-child
+{
+    margin-top: 24px;
+}
+.banner .wrapper .left li:last-child
+{
+    margin-bottom: 24px;
+}
+.banner .wrapper .left li span
+{      
+    float:right;
+}
+.banner .wrapper .left a
+{
+    
+    font-size: 14px;
+    color: #d3d1d9;
+}
+.banner .wrapper .left a:hover
+{
+    color: #02a4ec;
+}
+.banner .wrapper .right
+{
+    float: right;
+    margin-top: 50px;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+}
+.banner .wrapper .right .title
+{
+    font: 500 20px 楷体;
+    color: #fff;
+    line-height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.banner .right .menu
+{
+    height: 60px;
+    margin: 0 18px;
+    padding: 10px 0 18px 0;
+    border-bottom: 1px solid #efefef;
+}
+.banner .right .menu .content
+{
+    font-size: 12px;
+}
+.banner .right  a
+{
+    /* li里面包含a标签是对a写css,不对li写 */
+    /* a标签一定要转成行内块 */
+    display: inline-block;
+    border: 2px solid #22b0ff;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #00a4ff;  
+}  
+.goods
+{
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    	box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+        /* 边框的下阴影 */
+}
+.goods li
+{
+    float: left;
+    margin: 22px auto;
+    width: 130px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-left: 1px solid #666;
+}
+/* 在这部分要给字添加等高的边框 */
+/* 法1是li标签设置字大小的高和行高 */
+/* 法2 是li设置大的边框，在a设置跟子大小的边框，并设置与字大小的边框线 */
+.goods .left
+{
+    border-left: none;
+    color: #00a4ff;
+}
+.goods .right 
+{
+    float: right;
+    text-decoration: none;
+    border-left: none;
+    
+}
+.goods .right  a
+{
+    font-size: 14px;
+    color: #00a4ff;
+}
+.box h1
+{
+    width: 1200px;
+    height: 20px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+/* 在一个box中包含了多个li，可以满足需要多少个就设置多少个，不用增加div标签，增加li标签即可 */
+.box .video li
+{
+    float: left;
+    box-shadow: 0px 2px 3px 0px 
+	rgba(118, 118, 118, 0.2);
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 228px;
+    height: 270px;
+    position: relative;
+}
+/* 以上设置了relative是为了子绝父相，对父级设置定位，便于子集设置 */
+.box .video li .hot
+{
+    width: 100px;
+    height: 10px;
+    position: absolute;
+    top:4px;
+    right: -4px;
+}
+/* 对子集设置定位，可以用负数，会超出父级的范围 */
+.box .video li:nth-child(5n)
+{
+    margin-right: 0;
+}
+
+.box .video li img
+{
+    width: 228px;
+    height: 155px;
+}
+.box .video li h2
+{
+    margin: 24px 20px 0 22px;
+    font-size: 14px;
+    color: #050505;
+}
+.box .video li p 
+{
+    display: inline-block;
+    height: 10px;
+    line-height: 10px;
+    margin-left: 22px;
+    margin-bottom: 28px;
+    font-size: 10px;
+    color: #666;
+}
+.box .video li p span
+{
+    color: #ff7c2d;
+}
+.banquan
+{
+    margin-top: 40px;
+    background-color: #fff;
+    height: 220px;
+}
+.banquan .left
+{
+    float: left;
+}
+.banquan img
+{
+    float: left;
+    margin-top: 33px;
+    margin-bottom: 18px;
+    width: 195px;
+    height: 41px;
+}
+.banquan .left p
+{
+    margin: 20px 0 10px;
+    font-size: 15px;
+}
+.banquan  .left a
+{
+    
+    border: 1px solid #02a4ec;
+    padding: 5px 27px;
+    width: 120px;
+    height: 36px;
+    font-size: 15px;
+    color: #00a4ff;
+}
+.banquan .right
+{
+
+    float: right;
+    
+}
+.banquan .right dl
+{
+    float: left;
+    margin-top: 33px;
+    margin-left: 120px;
+}
+.banquan .right  dl a
+{
+    float: left;
+    font-size: 17px;
+    color: #494949;
+}
+.banquan .right dt
+{
+    font-size: 17px;
+    margin-top: 5px;
+}
+.banquan .right .first
+{
+    margin-top: 15px;
+}
